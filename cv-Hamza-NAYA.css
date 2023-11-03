@@ -1,0 +1,353 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+*{
+     /*reset les valeurs par défaults */ 
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     outline: none;
+     border: none;
+}
+
+/* passage d'un onglet à l'autre de maniere lisse */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* body */
+
+a{
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Handlee', cursive;
+    font-size: 26px;
+    color: black;
+    background: rgb(242, 242, 242);
+}
+
+/* main */
+
+/* navbar */ 
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 2rem 1rem;
+    height: 101px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-color: rgb(103, 159, 146);
+    font-size: 25px;
+    position: fixed;
+    z-index: 1;
+}
+
+.navbar img{
+    height: 100px;
+    width: 100px;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: white;
+    opacity: 0.75;
+}
+
+.link a:hover{
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.link a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color:rgb(155, 180, 155);
+    transition: all 0.3s ease;
+}
+
+.link a:hover::after{
+    width: 78%;
+}
+
+/* Accueil */
+
+.Accueil{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 100vh;
+    width: 100%;
+}
+
+.cadre{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    height: 80vh;
+    width: 100%;
+    background-image: url(images+cv/background2.jpg);
+    background-size: cover;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 50px;
+}
+
+.accueil h2,
+.accueil h3
+{
+    color: white;
+    font-size: 32px;
+}
+
+.typetexte{
+    display: inline-block;
+    box-shadow: 0 0 20px rgb(181, 220, 240);
+    border-radius: 50px;
+    margin: 0 15px;
+}
+
+.text{
+    font-size: 3em;
+    letter-spacing: 10px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    color: white;
+    animation: typing 5s;
+    margin: 15px 20px;
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+
+}
+@keyframes typing {
+    from {
+        width: 0; 
+    }
+}
+
+/* section objectif */ 
+
+.Objectif{
+    height: 100vh;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.graph{
+    width: 1100px;
+    height: 700px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(images+cv/background1.jpg);
+    color: white;
+}
+
+/* section Education */ 
+
+
+.Education{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Expériences,
+.Formations
+{
+    flex: 0 0 50%;
+    max-width: 49%;
+    margin-top: 30px;
+    margin-right: 10px;
+    color: rgb(155, 180, 155);
+}
+
+h1.titre{
+    font-size: 34px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.content{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.dark{
+    box-shadow: 16px 14px 20px #0000008c;
+}
+
+.ctn{
+    background-color:white;
+    padding: 30px 15px;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.item{
+    position: relative;
+    padding-left: 37px;
+    padding-bottom: 50px;
+}
+
+.item:last-child{
+    padding-bottom: 0;
+}
+
+.item::before{
+    content: '';
+    width: 3px;
+    position: absolute;
+    height: 100%;
+    left: 6px;
+    top: 0;
+    background-color: green;
+}
+
+.dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+/* section compétences */
+
+.Compétences {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.comp{
+    width: 900px;
+    height: 500px;
+    box-shadow: 16px 14px 20px #0000008c;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(103, 159, 146);
+    color: rgb(155, 180, 155);
+}
+
+.comp h1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* section contact */
+
+.Contact{
+    height: 800px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(155, 180, 155);
+}
+
+.effet{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 450px;
+    height: 450px;
+}
+
+.btn{
+    color: rgb(155, 180, 155);
+}
+
+.effet span:nth-child(1){
+    animation-duration: 12s;
+}
+
+.effet span:nth-child(2){
+    animation-direction: reverse;
+}
+
+.effet span:nth-child(3){
+    animation-duration: 9s;
+}
+
+.effet span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid  rgb(103, 159, 146);
+    box-shadow: 0 0 20px  rgb(103, 159, 146);
+    pointer-events: none;
+    animation: animation 6s linear infinite;
+}
+
+@keyframes animation {
+    0%{
+        transform: rotate(0deg);
+    }
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+/* footer */ 
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(103, 159, 146);
+    color: rgb(155, 180, 155);
+}
+
